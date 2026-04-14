@@ -1,0 +1,91 @@
+/* ========================================
+   Story / Heritage Section
+   ======================================== */
+
+.story {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, var(--black), var(--charcoal));
+}
+
+.story__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.story__text p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.story__text p:first-of-type::first-letter {
+  font-size: 4rem;
+  font-family: var(--font-display);
+  float: left;
+  line-height: 0.8;
+  margin: 0.1em 0.15em 0 0;
+  color: var(--gold);
+}
+
+.story__visual {
+  position: relative;
+  height: 480px;
+}
+
+.story__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.story__visual-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: rgba(212, 175, 55, 0.08);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  animation: visualShimmer 15s ease-in-out infinite;
+}
+
+/* Compact variant for homepage preview */
+.story--compact {
+  padding: 6rem 4rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .story__content {
+    grid-template-columns: 1fr;
+  }
+
+  .story__visual {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .story {
+    padding: var(--section-padding-mobile);
+  }
+
+  .story__visual {
+    height: 300px;
+  }
+
+  .story__visual-overlay {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,95 @@
+/* ========================================
+   Footer
+   ======================================== */
+
+.footer {
+  background: var(--black);
+  padding: 4rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer__brand-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__logo-img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.footer__tagline {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.footer__section h4 {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer__links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.footer__links a:hover {
+  color: var(--gold);
+}
+
+.footer__bottom {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

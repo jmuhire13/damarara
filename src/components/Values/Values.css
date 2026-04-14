@@ -1,0 +1,43 @@
+/* ========================================
+   Values Section
+   ======================================== */
+
+.values {
+  padding: var(--section-padding);
+  background: var(--black);
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.values__item {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--warm-gray) 0%, var(--charcoal) 100%);
+  border-left: 3px solid var(--gold);
+  transition: all var(--transition-fast);
+}
+
+.values__item:hover {
+  transform: translateX(10px);
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--warm-gray) 100%);
+}
+
+.values__item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
+.values__item p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .values {
+    padding: var(--section-padding-mobile);
+  }
+}

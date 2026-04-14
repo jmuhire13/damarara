@@ -1,0 +1,277 @@
+/* ========================================
+   Shop Section
+   ======================================== */
+
+.shop {
+  padding: var(--section-padding);
+  background: var(--black);
+}
+
+.shop__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Shop Item Card */
+.shop__item {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
+  padding: 3rem;
+  background: var(--charcoal);
+  border: 1px solid var(--gold-border);
+  transition: all var(--transition-medium);
+}
+
+.shop__item:hover {
+  border-color: var(--gold-border-hover);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Visual / Image */
+.shop__item-visual {
+  position: relative;
+  width: 100%;
+}
+
+.shop__image {
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.shop__icon-emoji {
+  font-size: 5rem;
+  position: relative;
+  z-index: 1;
+  filter: grayscale(0.3);
+  opacity: 0.6;
+}
+
+.shop__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.shop__badge--premium {
+  background: linear-gradient(135deg, var(--gold), var(--soft-gold));
+}
+
+/* Details */
+.shop__item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shop__item-name {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--gold);
+}
+
+.shop__item-origin {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.shop__item-desc {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Details Grid */
+.shop__details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--warm-gray);
+  border-left: 3px solid var(--gold);
+}
+
+.shop__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.shop__detail-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.shop__detail-value {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+/* Size Options */
+.shop__sizes {
+  display: flex;
+  gap: 1rem;
+}
+
+.shop__size-option {
+  flex: 1;
+}
+
+.shop__size-option input[type='radio'] {
+  display: none;
+}
+
+.shop__size-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--warm-gray);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.shop__size-option input[type='radio']:checked + label {
+  background: var(--black);
+  border-color: var(--gold);
+}
+
+.shop__size-option label:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.shop__size-amount {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.shop__size-price {
+  font-size: 0.9rem;
+  color: var(--gold);
+}
+
+/* Quantity */
+.shop__quantity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shop__quantity label {
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.shop__qty-controls {
+  display: flex;
+  align-items: center;
+  background: var(--warm-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.shop__qty-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: var(--gold);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.shop__qty-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.shop__qty-input {
+  width: 60px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  border-right: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-primary);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.shop__qty-input:focus {
+  outline: none;
+}
+
+/* Add to Order Button */
+.shop__add-btn {
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.shop__add-btn:hover {
+  background: var(--soft-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px var(--gold-glow);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .shop__item {
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop {
+    padding: var(--section-padding-mobile);
+  }
+
+  .shop__item {
+    grid-template-columns: 1fr;
+  }
+
+  .shop__image {
+    aspect-ratio: 16/9;
+  }
+
+  .shop__sizes {
+    flex-wrap: wrap;
+  }
+
+  .shop__size-option {
+    min-width: 80px;
+  }
+}

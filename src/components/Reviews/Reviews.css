@@ -1,0 +1,219 @@
+/* ========================================
+   Reviews Section
+   ======================================== */
+
+.reviews {
+  padding: var(--section-padding);
+  background: linear-gradient(to bottom, var(--charcoal), var(--black));
+}
+
+.reviews__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Form Section */
+.reviews__form-section {
+  position: sticky;
+  top: 120px;
+}
+
+.reviews__form-title {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.reviews__success {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  animation: fadeInUp 0.4s ease;
+}
+
+.reviews__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviews__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reviews__form-group label {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.reviews__form-group input,
+.reviews__form-group textarea,
+.reviews__form-group select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--warm-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.reviews__form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%23d4af37'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.reviews__form-group input:focus,
+.reviews__form-group textarea:focus,
+.reviews__form-group select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.reviews__form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Star Rating Interactive */
+.reviews__stars {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--gold);
+}
+
+.reviews__star-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  padding: 0.15rem;
+  transition: transform 0.15s ease;
+}
+
+.reviews__star-btn:hover {
+  transform: scale(1.2);
+}
+
+.reviews__star-display {
+  color: var(--gold);
+}
+
+/* Submit Button */
+.reviews__submit-btn {
+  padding: 1rem 2rem;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.reviews__submit-btn:hover {
+  background: var(--soft-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px var(--gold-glow);
+}
+
+/* Reviews List */
+.reviews__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reviews__card {
+  background: var(--warm-gray);
+  padding: 2rem;
+  border-left: 3px solid var(--gold);
+  transition: all var(--transition-fast);
+}
+
+.reviews__card:hover {
+  transform: translateX(5px);
+}
+
+.reviews__card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.reviews__card-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.reviews__card-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.reviews__card-product {
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+
+.reviews__card-date {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.reviews__card-text {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1024px) {
+  .reviews__wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .reviews__form-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    padding: var(--section-padding-mobile);
+  }
+}

@@ -1,0 +1,15 @@
+/* ========================================
+   Responsive Breakpoints
+   ======================================== */
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem 1.5rem;
+  }
+}

@@ -1,0 +1,238 @@
+/* ========================================
+   Order Modal (Checkout)
+   ======================================== */
+
+.order-modal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.order-modal {
+  background: var(--charcoal);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--gold-glow);
+  position: relative;
+}
+
+.order-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 1;
+  transition: color var(--transition-fast);
+}
+
+.order-modal__close:hover {
+  color: var(--gold);
+}
+
+.order-modal__title {
+  padding: 2rem 3rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+.order-modal__body {
+  padding: 2rem 3rem 3rem;
+}
+
+/* Review */
+.order-modal__review {
+  background: var(--warm-gray);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-left: 3px solid var(--gold);
+}
+
+.order-modal__review h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+}
+
+.order-modal__review-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.order-modal__review-item:last-child {
+  border-bottom: none;
+}
+
+/* Customer Form */
+.order-modal__form h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+}
+
+.order-modal__form-group {
+  margin-bottom: 1.25rem;
+}
+
+.order-modal__form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.order-modal__form-group input,
+.order-modal__form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--warm-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.order-modal__form-group input:focus,
+.order-modal__form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.order-modal__form-group textarea {
+  resize: vertical;
+}
+
+/* Total */
+.order-modal__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+  border-top: 2px solid var(--gold-glow);
+  border-bottom: 2px solid var(--gold-glow);
+}
+
+.order-modal__total-amount {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Submit */
+.order-modal__submit-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.order-modal__submit-btn:hover {
+  background: var(--soft-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Success */
+.order-modal__success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.order-modal__success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+}
+
+.order-modal__success h3 {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.order-modal__success p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.order-modal__ref {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.order-modal__success-total {
+  font-size: 1.3rem;
+  color: var(--gold);
+  margin-top: 1rem;
+}
+
+.order-modal__done-btn {
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.order-modal__done-btn:hover {
+  background: var(--soft-gold);
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+  .order-modal__overlay {
+    padding: 1rem;
+  }
+
+  .order-modal__title {
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+
+  .order-modal__body {
+    padding: 1.5rem 2rem 2rem;
+  }
+}
