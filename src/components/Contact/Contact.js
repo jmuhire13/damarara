@@ -61,9 +61,9 @@ const Contact = () => {
           <div className="contact__social">
             <span className="contact__info-label">Follow Us</span>
             <div className="contact__social-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+              <a href="#!" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="#!" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="#!" target="_blank" rel="noopener noreferrer">Twitter</a>
             </div>
           </div>
         </div>

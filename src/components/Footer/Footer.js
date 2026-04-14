@@ -38,10 +38,10 @@ const Footer = () => {
         <div className="footer__section">
           <h4>Follow</h4>
           <ul className="footer__links">
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#!" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="#!" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="#!" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="#!" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
           </ul>
         </div>
       </div>
