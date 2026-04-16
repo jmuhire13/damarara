@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import logoImage from '../../assets/images/Damarara Logo.jpg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -22,9 +23,7 @@ const Navbar = () => {
   }, [location]);
 
   const navLinks = [
-    { path: '/', label: 'Home' },
     { path: '/history', label: 'History' },
-    { path: '/products', label: 'Products' },
     { path: '/shop', label: 'Shop' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
@@ -33,8 +32,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
       <Link to="/" className="navbar__logo">
-        {/* LOGO PLACEHOLDER — Replace src with your logo file */}
-        <div className="logo-placeholder">Logo</div>
+        <img src={logoImage} alt="Damarara Logo" className="navbar__logo-image" />
         <span className="navbar__brand">Damarara</span>
       </Link>
 

@@ -192,11 +192,6 @@ const ShopItem = ({ product, onAddToOrder }) => {
 const Shop = ({ onAddToOrder }) => {
   return (
     <section className="shop">
-      <div className="section-header">
-        <div className="section-number">— 03 —</div>
-        <h2 className="section-title">Shop Our Collection</h2>
-        <p className="section-subtitle">Select your favorites and place your order</p>
-      </div>
       <div className="shop__container container">
         {shopProducts.map((product) => (
           <ShopItem key={product.id} product={product} onAddToOrder={onAddToOrder} />

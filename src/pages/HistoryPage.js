@@ -1,7 +1,6 @@
 import React from 'react';
 import Story from '../components/Story/Story';
 import Journey from '../components/Journey/Journey';
-import Values from '../components/Values/Values';
 import './Pages.css';
 
 const HistoryPage = () => {
@@ -19,7 +18,6 @@ const HistoryPage = () => {
 
       <Story />
       <Journey />
-      <Values />
     </main>
   );
 };

@@ -34,8 +34,8 @@ const Contact = () => {
             <HiMail className="contact__info-icon" />
             <div>
               <span className="contact__info-label">Email</span>
-              <a href="mailto:hello@damarara.rw" className="contact__info-value">
-                hello@damarara.rw
+              <a href="s.kabayizas@gmail.com" className="contact__info-value">
+                s.kabayizas@gmail.com
               </a>
             </div>
           </div>
@@ -44,8 +44,8 @@ const Contact = () => {
             <HiPhone className="contact__info-icon" />
             <div>
               <span className="contact__info-label">Phone</span>
-              <a href="tel:+250123456789" className="contact__info-value">
-                +250 123 456 789
+              <a href="tel:+250788303897" className="contact__info-value">
+                +250 788 303 897
               </a>
             </div>
           </div>

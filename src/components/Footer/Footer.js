@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '../../assets/images/Damarara Logo.jpg';
 import './Footer.css';
 
 const Footer = () => {
@@ -7,8 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content container">
         <div className="footer__brand-section">
-          {/* LOGO PLACEHOLDER — Replace with actual logo */}
-          <div className="logo-placeholder footer__logo-img">Logo</div>
+          <img src={logoImage} alt="Damarara Logo" className="footer__logo-img" />
           <div className="footer__brand-name">Damarara</div>
           <p className="footer__tagline">
             From the misty hills of Rwanda to your cup. Premium tea and coffee crafted with care, honoring tradition and empowering communities.

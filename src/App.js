@@ -15,7 +15,6 @@ import OrderModal from './components/OrderModal/OrderModal';
 // Pages
 import HomePage from './pages/HomePage';
 import HistoryPage from './pages/HistoryPage';
-import ProductsPage from './pages/ProductsPage';
 import ShopPage from './pages/ShopPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -83,7 +82,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/history" element={<HistoryPage />} />
-          <Route path="/products" element={<ProductsPage />} />
           <Route
             path="/shop"
             element={<ShopPage onAddToOrder={handleAddToOrder} />}
